@@ -37,6 +37,7 @@ COPY --from=builder /etc/group /etc/group
 WORKDIR /isotope
 
 # Copy our build
+COPY --from=builder /lib/x86_64-linux-gnu/libc.so.6 /lib/x86_64-linux-gnu/libc.so.6
 COPY --from=builder /isotope/target/release/isotope ./
 
 # Use an unprivileged user.
