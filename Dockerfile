@@ -52,4 +52,4 @@ COPY --from=builder /isotope/target/release/isotope ./
 # Use an unprivileged user.
 USER isotope_user:isotope_user
 
-ENTRYPOINT ["/isotope/isotope"]
+CMD ["/isotope/isotope"]
